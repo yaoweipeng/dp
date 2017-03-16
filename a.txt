@@ -1,0 +1,444 @@
+ 
+ 
+ 
+ 
+        d########P  d########b        .######b          d#######  d##P      d##P
+       d########P  d###########    d###########     .##########  d##P      d##P 
+      ----        ----     ----  -----     ----   -----         ----      -- P  
+     d########P  d####,,,####P ####.      .#### d###P          d############P   
+    d########P  d#########P   ####       .###P ####.          d############P    
+   d##P        d##P           ####     d####   ####.         d##P      d##P     
+  d########P  d##P            ###########P     ##########P  d##P      d##P      
+ d########P  d##P              d######P          #######P  d##P      d##P       
+ 
+ The code was compiled with the following compile time options
+ *************************************************************
+ Global particle counting -DPARTICLE_COUNT_UPDATE
+ Particle ID tracking (8-bytes) -DPARTICLE_ID
+ QED Effects -DPHOTONS
+ *************************************************************
+ 
+ Welcome to EPOCH2D version 4.7.6   (commit v4.7.6-0-gf0d2a78-clean)
+ 
+ Code is running on 16 processing elements
+ 
+ Specify output directory
+ Name of species 1 is ele_bm
+ Name of species 2 is ion_bm
+ Name of species 3 is ele_bg
+ Name of species 4 is ion_bg
+ Name of species 5 is ele_o1
+ Name of species 6 is ion_o1
+ Name of species 7 is ele_o2
+ Name of species 8 is ion_o2
+ Name of species 9 is ele_o3
+ Name of species 10 is ion_o3
+ Name of species 11 is ele_qed
+ Name of species 12 is ion_qed
+ Name of species 13 is pho
+ Processor subdivision is            4           4
+ Initial conditions complete and valid. Attempting to load particles
+ 
+ Loaded 120000 particles of species "ele_bm"
+ Loaded 120000 particles of species "ion_bm"
+ Loaded 525000 particles of species "ele_bg"
+ Loaded 525000 particles of species "ion_bg"
+ Loaded 102750 particles of species "ele_o1"
+ Loaded 102750 particles of species "ion_o1"
+ Loaded 103500 particles of species "ele_o2"
+ Loaded 103500 particles of species "ion_o2"
+ Loaded 6000 particles of species "ele_o3"
+ Loaded 6000 particles of species "ion_o3"
+Initial load imbalance: 0.622, final: 0.840, improvement: 0.351, next:        1
+ Equilibrium set up OK, running code
+Time  0.100272872928E-17 and iteration           0 after 0:00:00:00.00  
+ --------------------------------------------------------------------------
+ Merging info, num_spx,num_spy,num_spz
+                    20                    20                    20
+ step_merge:                100000 min_per_momentum                     4
+ tolerent_photon_number:                    50
+ --------------------------------------------------------------------------
+ Part Num:           1                120000
+ Part Num:           2                120000
+ Part Num:           3                525000
+ Part Num:           4                525000
+ Part Num:           5                102750
+ Part Num:           6                102750
+ Part Num:           7                103500
+ Part Num:           8                103500
+ Part Num:           9                  6000
+ Part Num:          10                  6000
+ Part Num:          11                     0
+ Part Num:          12                     0
+ Part Num:          13                    23
+ *** WARNING ***
+ Argument to "find_value_from_table_alt" outside the range of the table.
+ Using truncated value. No more warnings will be issued.
+Time  0.200545745856E-16 and iteration          10 after 0:00:00:02.10  
+ Part Num:           1                120000
+ Part Num:           2                120000
+ Part Num:           3                525000
+ Part Num:           4                525000
+ Part Num:           5                102750
+ Part Num:           6                102750
+ Part Num:           7                103500
+ Part Num:           8                103500
+ Part Num:           9                  6000
+ Part Num:          10                  6000
+ Part Num:          11                  1004
+ Part Num:          12                  1004
+ Part Num:          13                 29771
+Time  0.401091491712E-16 and iteration          20 after 0:00:00:04.43  
+ Part Num:           1                120000
+ Part Num:           2                120000
+ Part Num:           3                525000
+ Part Num:           4                525000
+ Part Num:           5                102750
+ Part Num:           6                102750
+ Part Num:           7                103500
+ Part Num:           8                103500
+ Part Num:           9                  6000
+ Part Num:          10                  6000
+ Part Num:          11                  5989
+ Part Num:          12                  5989
+ Part Num:          13                110847
+ *** WARNING ***
+ Argument to "find_value_from_table_1d" outside the range of the table.
+ Using truncated value. No more warnings will be issued.
+Time  0.601637237568E-16 and iteration          30 after 0:00:00:07.72  
+ Part Num:           1                120000
+ Part Num:           2                120000
+ Part Num:           3                525000
+ Part Num:           4                525000
+ Part Num:           5                102750
+ Part Num:           6                102750
+ Part Num:           7                103500
+ Part Num:           8                103500
+ Part Num:           9                  6000
+ Part Num:          10                  6000
+ Part Num:          11                 15617
+ Part Num:          12                 15617
+ Part Num:          13                232751
+Time  0.802182983424E-16 and iteration          40 after 0:00:00:12.46  
+ Part Num:           1                120000
+ Part Num:           2                120000
+ Part Num:           3                525000
+ Part Num:           4                525000
+ Part Num:           5                102750
+ Part Num:           6                102750
+ Part Num:           7                103500
+ Part Num:           8                103500
+ Part Num:           9                  6000
+ Part Num:          10                  6000
+ Part Num:          11                 28926
+ Part Num:          12                 28926
+ Part Num:          13                389645
+Time  0.100272872928E-15 and iteration          50 after 0:00:00:18.98  
+ Part Num:           1                120000
+ Part Num:           2                120000
+ Part Num:           3                525000
+ Part Num:           4                525000
+ Part Num:           5                102750
+ Part Num:           6                102750
+ Part Num:           7                103500
+ Part Num:           8                103500
+ Part Num:           9                  6000
+ Part Num:          10                  6000
+ Part Num:          11                 45147
+ Part Num:          12                 45147
+ Part Num:          13                572714
+Time  0.120327447514E-15 and iteration          60 after 0:00:00:27.21  
+ Part Num:           1                120000
+ Part Num:           2                120000
+ Part Num:           3                525000
+ Part Num:           4                525000
+ Part Num:           5                102750
+ Part Num:           6                102750
+ Part Num:           7                103500
+ Part Num:           8                103500
+ Part Num:           9                  6000
+ Part Num:          10                  6000
+ Part Num:          11                 63854
+ Part Num:          12                 63854
+ Part Num:          13                763616
+Time  0.140382022099E-15 and iteration          70 after 0:00:00:37.15  
+ Part Num:           1                120000
+ Part Num:           2                120000
+ Part Num:           3                525000
+ Part Num:           4                525000
+ Part Num:           5                102750
+ Part Num:           6                102750
+ Part Num:           7                103500
+ Part Num:           8                103500
+ Part Num:           9                  6000
+ Part Num:          10                  6000
+ Part Num:          11                 85191
+ Part Num:          12                 85191
+ Part Num:          13                974447
+Time  0.160436596685E-15 and iteration          80 after 0:00:00:48.69  
+ Part Num:           1                120000
+ Part Num:           2                120000
+ Part Num:           3                525000
+ Part Num:           4                525000
+ Part Num:           5                102750
+ Part Num:           6                102750
+ Part Num:           7                103500
+ Part Num:           8                103500
+ Part Num:           9                  6000
+ Part Num:          10                  6000
+ Part Num:          11                108749
+ Part Num:          12                108749
+ Part Num:          13               1210141
+Time  0.180491171270E-15 and iteration          90 after 0:00:01:02.60  
+ Part Num:           1                120000
+ Part Num:           2                120000
+ Part Num:           3                525000
+ Part Num:           4                525000
+ Part Num:           5                102750
+ Part Num:           6                102750
+ Part Num:           7                103500
+ Part Num:           8                103500
+ Part Num:           9                  6000
+ Part Num:          10                  6000
+ Part Num:          11                134259
+ Part Num:          12                134259
+ Part Num:          13               1469543
+Time  0.200545745856E-15 and iteration         100 after 0:00:01:17.07  
+ Part Num:           1                120000
+ Part Num:           2                120000
+ Part Num:           3                525000
+ Part Num:           4                525000
+ Part Num:           5                102750
+ Part Num:           6                102750
+ Part Num:           7                103500
+ Part Num:           8                103500
+ Part Num:           9                  6000
+ Part Num:          10                  6000
+ Part Num:          11                161832
+ Part Num:          12                161832
+ Part Num:          13               1752712
+Time  0.220600320442E-15 and iteration         110 after 0:00:01:32.60  
+ Part Num:           1                120000
+ Part Num:           2                120000
+ Part Num:           3                525000
+ Part Num:           4                525000
+ Part Num:           5                102750
+ Part Num:           6                102750
+ Part Num:           7                103500
+ Part Num:           8                103500
+ Part Num:           9                  6000
+ Part Num:          10                  6000
+ Part Num:          11                192369
+ Part Num:          12                192369
+ Part Num:          13               2064168
+Time  0.240654895027E-15 and iteration         120 after 0:00:01:49.01  
+ Part Num:           1                120000
+ Part Num:           2                120000
+ Part Num:           3                525000
+ Part Num:           4                525000
+ Part Num:           5                102750
+ Part Num:           6                102750
+ Part Num:           7                103500
+ Part Num:           8                103500
+ Part Num:           9                  6000
+ Part Num:          10                  6000
+ Part Num:          11                226665
+ Part Num:          12                226665
+ Part Num:          13               2407319
+Time  0.260709469613E-15 and iteration         130 after 0:00:02:06.27  
+ Part Num:           1                120000
+ Part Num:           2                120000
+ Part Num:           3                525000
+ Part Num:           4                525000
+ Part Num:           5                102750
+ Part Num:           6                102750
+ Part Num:           7                103500
+ Part Num:           8                103500
+ Part Num:           9                  6000
+ Part Num:          10                  6000
+ Part Num:          11                265403
+ Part Num:          12                265403
+ Part Num:          13               2777256
+Time  0.280764044198E-15 and iteration         140 after 0:00:02:23.99  
+ Part Num:           1                120000
+ Part Num:           2                120000
+ Part Num:           3                525000
+ Part Num:           4                525000
+ Part Num:           5                102750
+ Part Num:           6                102750
+ Part Num:           7                103500
+ Part Num:           8                103500
+ Part Num:           9                  6000
+ Part Num:          10                  6000
+ Part Num:          11                308319
+ Part Num:          12                308319
+ Part Num:          13               3172500
+Time  0.300818618784E-15 and iteration         150 after 0:00:02:41.87  
+ Part Num:           1                120000
+ Part Num:           2                120000
+ Part Num:           3                525000
+ Part Num:           4                525000
+ Part Num:           5                102750
+ Part Num:           6                102750
+ Part Num:           7                103500
+ Part Num:           8                103500
+ Part Num:           9                  6000
+ Part Num:          10                  6000
+ Part Num:          11                355709
+ Part Num:          12                355709
+ Part Num:          13               3594576
+Time  0.320873193370E-15 and iteration         160 after 0:00:02:59.98  
+ Part Num:           1                120000
+ Part Num:           2                120000
+ Part Num:           3                525000
+ Part Num:           4                525000
+ Part Num:           5                102750
+ Part Num:           6                102750
+ Part Num:           7                103500
+ Part Num:           8                103500
+ Part Num:           9                  6000
+ Part Num:          10                  6000
+ Part Num:          11                405813
+ Part Num:          12                405813
+ Part Num:          13               4046185
+Time  0.340927767955E-15 and iteration         170 after 0:00:03:20.10  
+ Part Num:           1                120000
+ Part Num:           2                120000
+ Part Num:           3                525000
+ Part Num:           4                525000
+ Part Num:           5                102750
+ Part Num:           6                102750
+ Part Num:           7                103500
+ Part Num:           8                103500
+ Part Num:           9                  6000
+ Part Num:          10                  6000
+ Part Num:          11                458051
+ Part Num:          12                458051
+ Part Num:          13               4537743
+Time  0.360982342541E-15 and iteration         180 after 0:00:03:40.04  
+ Part Num:           1                120000
+ Part Num:           2                120000
+ Part Num:           3                525000
+ Part Num:           4                525000
+ Part Num:           5                102750
+ Part Num:           6                102750
+ Part Num:           7                103500
+ Part Num:           8                103500
+ Part Num:           9                  6000
+ Part Num:          10                  6000
+ Part Num:          11                510753
+ Part Num:          12                510753
+ Part Num:          13               5070523
+Time  0.381036917126E-15 and iteration         190 after 0:00:04:01.33  
+ Part Num:           1                120000
+ Part Num:           2                120000
+ Part Num:           3                525000
+ Part Num:           4                525000
+ Part Num:           5                102750
+ Part Num:           6                102750
+ Part Num:           7                103500
+ Part Num:           8                103500
+ Part Num:           9                  6000
+ Part Num:          10                  6000
+ Part Num:          11                561756
+ Part Num:          12                561756
+ Part Num:          13               5648869
+Time  0.401091491712E-15 and iteration         200 after 0:00:04:24.10  
+ Part Num:           1                120000
+ Part Num:           2                120000
+ Part Num:           3                525000
+ Part Num:           4                525000
+ Part Num:           5                102750
+ Part Num:           6                102750
+ Part Num:           7                103500
+ Part Num:           8                103500
+ Part Num:           9                  6000
+ Part Num:          10                  6000
+ Part Num:          11                609383
+ Part Num:          12                609383
+ Part Num:          13               6265875
+Time  0.421146066298E-15 and iteration         210 after 0:00:04:48.56  
+ Part Num:           1                120000
+ Part Num:           2                120000
+ Part Num:           3                525000
+ Part Num:           4                525000
+ Part Num:           5                102750
+ Part Num:           6                102750
+ Part Num:           7                103500
+ Part Num:           8                103500
+ Part Num:           9                  6000
+ Part Num:          10                  6000
+ Part Num:          11                653814
+ Part Num:          12                653814
+ Part Num:          13               6907311
+Time  0.441200640883E-15 and iteration         220 after 0:00:05:15.02  
+ Part Num:           1                120000
+ Part Num:           2                120000
+ Part Num:           3                525000
+ Part Num:           4                525000
+ Part Num:           5                102750
+ Part Num:           6                102750
+ Part Num:           7                103500
+ Part Num:           8                103500
+ Part Num:           9                  6000
+ Part Num:          10                  6000
+ Part Num:          11                697596
+ Part Num:          12                697596
+ Part Num:          13               7572974
+Time  0.461255215469E-15 and iteration         230 after 0:00:05:42.91  
+ Part Num:           1                120000
+ Part Num:           2                120000
+ Part Num:           3                525000
+ Part Num:           4                525000
+ Part Num:           5                102750
+ Part Num:           6                102750
+ Part Num:           7                103500
+ Part Num:           8                103500
+ Part Num:           9                  6000
+ Part Num:          10                  6000
+ Part Num:          11                741829
+ Part Num:          12                741829
+ Part Num:          13               8258935
+Time  0.481309790054E-15 and iteration         240 after 0:00:06:13.83  
+ Part Num:           1                120000
+ Part Num:           2                120000
+ Part Num:           3                525000
+ Part Num:           4                525000
+ Part Num:           5                102750
+ Part Num:           6                102750
+ Part Num:           7                103500
+ Part Num:           8                103500
+ Part Num:           9                  6000
+ Part Num:          10                  6000
+ Part Num:          11                786448
+ Part Num:          12                786448
+ Part Num:          13               8958570
+Time  0.501364364640E-15 and iteration         250 after 0:00:06:44.53  
+ Part Num:           1                120000
+ Part Num:           2                120000
+ Part Num:           3                525000
+ Part Num:           4                525000
+ Part Num:           5                102750
+ Part Num:           6                102750
+ Part Num:           7                103500
+ Part Num:           8                103500
+ Part Num:           9                  6000
+ Part Num:          10                  6000
+ Part Num:          11                830420
+ Part Num:          12                830420
+ Part Num:          13               9642848
+Time  0.521418939226E-15 and iteration         260 after 0:00:07:16.41  
+ Part Num:           1                120000
+ Part Num:           2                120000
+ Part Num:           3                525000
+ Part Num:           4                525000
+ Part Num:           5                102750
+ Part Num:           6                102750
+ Part Num:           7                103500
+ Part Num:           8                103500
+ Part Num:           9                  6000
+ Part Num:          10                  6000
+ Part Num:          11                874641
+ Part Num:          12                874641
+ Part Num:          13              10302884
+ Final runtime of core = 7 minutes, 31.22 seconds
