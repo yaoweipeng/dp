@@ -1,17 +1,14 @@
 import re
-import matplotlib.pyplot as pyplot
 import numpy
+
+from tempfile import TemporaryFile
+
+out = TemporaryFile()
 
 def GetNumAndPlot(infile):
 	with open(infile) as fp:
-		# b = numpy.zeros(26)
-		for result in re.findall('Part Num:          11(.*?)\n', fp.read(), re.S):
-			print(result)
-	# pyplot.plot(b)
-	# pyplot.show()
+	    for result in re.findall('Part Num:           7(.*?)\n', fp.read(), re.S):
+	    	print(result)
 
-
-
-GetNumAndPlot('a.txt')
-
+GetNumAndPlot('mer.txt')
 
