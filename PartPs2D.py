@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib as mpl
 mpl.style.use('seaborn-talk')
+plt.rcParams['font.size'] = 16
 # -----------------
 
 # Set constants
@@ -27,7 +28,7 @@ file = '/Users/yaowp/Desktop/'
 for i in range(11):
 	ii = i*1
 
-	folder   = 'Data'
+	folder   = 'Data1'
 	fname    = file+folder+'/6'+str(ii).zfill(4)+'.sdf'
 	datafile = sdf.read(fname)
 # -------------------
@@ -78,7 +79,7 @@ for i in range(11):
 	plt.legend(loc='best', numpoints=1, fancybox=True)
 	plt.title('jet electron x-px at '+str(ii*5)+' $\omega_{pe}^{-1}$')
 	# plt.show()
-	plt.savefig(file+folder+'/plots/PartSpec'+str(ii)+'.png',
+	plt.savefig(file+folder+'/PartSpec'+str(ii)+'.png',
 		bbox_inches='tight')
 	plt.close()
 # ---------------------

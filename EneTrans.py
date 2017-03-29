@@ -14,9 +14,12 @@ plt.rcParams['font.size'] = 16
 
 # Allocate array
 Num = 11
-TeS1 = np.ones(Num)
-TeS2 = np.ones(Num)
-TeS3 = np.ones(Num)
+TeF1 = np.ones(Num)
+TeF2 = np.ones(Num)
+TeF3 = np.ones(Num)
+TeP1 = np.ones(Num)
+TeP2 = np.ones(Num)
+TeP3 = np.ones(Num)
 time   = np.ones(Num)
 # --------------------
 
@@ -32,7 +35,8 @@ for i in range(Num):
 
 # Get data
 	time[i] = i*5
-	TeS1[i] = datafile.Total_Field_Energy_in_Simulation__J_.data+datafile.Total_Particle_Energy_in_Simulation__J_.data
+	TeF1[i] = datafile.Total_Field_Energy_in_Simulation__J_.data
+	TeP1[i] = datafile.Total_Particle_Energy_in_Simulation__J_.data
 # ----------------------
 
 # Read SDF file
@@ -45,7 +49,8 @@ for i in range(Num):
 
 # Get data
 	time[i] = i*5
-	TeS2[i] = datafile.Total_Field_Energy_in_Simulation__J_.data+datafile.Total_Particle_Energy_in_Simulation__J_.data
+	TeF2[i] = datafile.Total_Field_Energy_in_Simulation__J_.data
+	TeP2[i] = datafile.Total_Particle_Energy_in_Simulation__J_.data
 # -----------------------
 
 # Read SDF file
@@ -57,26 +62,30 @@ for i in range(Num):
 	
 # Get data
 	time[i] = i*5
-	TeS3[i] = datafile.Total_Field_Energy_in_Simulation__J_.data+datafile.Total_Particle_Energy_in_Simulation__J_.data
+	TeF3[i] = datafile.Total_Field_Energy_in_Simulation__J_.data
+	TeP3[i] = datafile.Total_Particle_Energy_in_Simulation__J_.data
 # -------------------------
 
 
 # Draw figure
 plt.figure(figsize=(8,5))
 ax = plt.subplot()
-ax.plot(time, (TeS1)/TeS1[0],'r-',  lw=2, label='$T_e=5keV$')
-ax.plot(time, (TeS3)/TeS3[0],'b--', lw=2, label='$T_e=50eV$')
-ax.plot(time, (TeS2)/TeS2[0],'m:',  lw=2, label='$T_e=0$')
+ax.semilogy(time, TeP1,'r-',  lw=2, label='$T_e=5keV$, Part' )
+ax.semilogy(time, TeP3,'b-',  lw=3, label='$T_e=50eV$, Part' )
+ax.semilogy(time, TeP2,'m-',  lw=2, label='$T_e=0$,    Part' )
+ax.semilogy(time, TeF1,'r--', lw=2, label='$T_e=5keV$, Field')
+ax.semilogy(time, TeF3,'b--', lw=3, label='$T_e=50eV$, Field')
+ax.semilogy(time, TeF2,'m--', lw=2, label='$T_e=0$,    Field')
 # -------------------------
 
 # Make it pretty
 plt.xlabel('time($\omega_{pe}^{-1}$)')
-plt.ylabel('$\Delta E$')
-plt.ylim(0,1.2)
+plt.ylabel('Energy in $J$')
+# plt.ylim(0,1.2)
 plt.legend(loc='best', numpoints=1, fancybox=True, fontsize=16)
 # plt.grid(b=True,which='major',axis='both')
-plt.title('energy conservation')
-plt.savefig(file+'EneCons.pdf',bbox_inches='tight')
+plt.title('energy transfer')
+plt.savefig(file+'EneTrans.pdf',bbox_inches='tight')
 plt.close()
 # --------------------------
 
