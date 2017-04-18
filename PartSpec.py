@@ -3,7 +3,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib as mpl
 
-plt.style.use('seaborn-poster')
+mpl.style.use('seaborn-talk')
+mpl.rcParams['font.size'] = 24
 # plt.rcParams['font.family'] = 'sans-serif'
 # plt.rcParams['font.sans-serif'] = 'Tahoma'
 # # plt.rcParams['font.monospace'] = 'Ubuntu Mono'
@@ -17,7 +18,7 @@ plt.style.use('seaborn-poster')
 
 
 # constants for normalization
-n0 = 0.1
+n0 = 1e20
 me = 9.1e-31
 qe = 1.6e-19
 ep = 8.9e-12
@@ -37,10 +38,10 @@ en0 = me*c**2
 num_bins = 1000
 
 # simulation domain
-nx = 4000
-ny = 4000
-lx = 800
-ly = 800
+nx = 2400
+ny = 1552
+lx = 300
+ly = 194
 
 # figure domain (set by grid)
 grid_min_x = 0
@@ -81,51 +82,94 @@ newcmap = mpl.colors.LinearSegmentedColormap.from_list("newjet", jet_vals)
 file = '/Users/yaowp/Desktop/'
 
 
-for i in range(26):
-	ii = i
-
-	folder = 'aj-ext2'
+for i in range(1):
+	ii = i+8
+	folder = 'test'
 	fname = file+folder+'/6'+str(ii).zfill(4)+'.sdf'
 	datafile = sdf.read(fname)
-	GamBmE = datafile.Particles_Gamma_subset_ele1_ele_bm.data
+	GamBmE = datafile.Particles_Gamma_subset_ele1_ele.data
 	# GamBgE = datafile.Particles_Gamma_subset_ele1_ele_bg.data
 
-	nbme, ebme, patches = plt.hist(GamBmE, 
-		num_bins, 
+	nbme, ebme, patches = plt.hist(np.log(GamBmE-1), 
+		num_bins, range=[-2,8],
 		# normed=1, 
 		facecolor='red', 
 		alpha=0
 		)
-	plt.loglog(ebme[1:],
-		nbme,
+	plt.plot(ebme[1:],
+		np.log(nbme/nbme[0]+0.001),
+		'k-',
+		lw=2,
+		label='$\omega_{pe}t=200$',
+		)
+
+	ii = i+12
+	folder = 'test'
+	fname = file+folder+'/6'+str(ii).zfill(4)+'.sdf'
+	datafile = sdf.read(fname)
+	GamBmE = datafile.Particles_Gamma_subset_ele1_ele.data
+	# GamBgE = datafile.Particles_Gamma_subset_ele1_ele_bg.data
+
+	nbme, ebme, patches = plt.hist(np.log(GamBmE-1), 
+		num_bins, range=[-2,8],
+		# normed=1, 
+		facecolor='red', 
+		alpha=0
+		)
+	plt.plot(ebme[1:],
+		np.log(nbme/nbme[0]+0.001),
 		'r-',
 		lw=2,
-		label='jet',
+		label='$\omega_{pe}t=300$',
 		)
 
-	folder = 'aj-ext2'
+	ii = i+16
+	folder = 'test'
 	fname = file+folder+'/6'+str(ii).zfill(4)+'.sdf'
 	datafile = sdf.read(fname)
-	GamBmE = datafile.Particles_Gamma_subset_ele1_ele_bg.data
+	GamBmE = datafile.Particles_Gamma_subset_ele1_ele.data
 	# GamBgE = datafile.Particles_Gamma_subset_ele1_ele_bg.data
 
-	nbme, ebme, patches = plt.hist(GamBmE, 
-		num_bins, 
+	nbme, ebme, patches = plt.hist(np.log(GamBmE-1), 
+		num_bins, range=[-2,8],
 		# normed=1, 
 		facecolor='red', 
 		alpha=0
 		)
-	plt.loglog(ebme[1:],
-		nbme,
+	plt.plot(ebme[1:],
+		np.log(nbme/nbme[0]+0.001),
 		'b-',
 		lw=2,
-		label='amb',
+		label='$\omega_{pe}t=400$',
 		)
-	plt.ylim(1,1e7)
-	plt.xlabel('$\gamma$')
+
+
+	ii = i+20
+	folder = 'test'
+	fname = file+folder+'/6'+str(ii).zfill(4)+'.sdf'
+	datafile = sdf.read(fname)
+	GamBmE = datafile.Particles_Gamma_subset_ele1_ele.data
+	# GamBgE = datafile.Particles_Gamma_subset_ele1_ele_bg.data
+
+	nbme, ebme, patches = plt.hist(np.log(GamBmE-1), 
+		num_bins, range=[-2,8],
+		# normed=1, 
+		facecolor='red', 
+		alpha=0
+		)
+	plt.plot(ebme[1:],
+		np.log(nbme/nbme[0]+0.001),
+		'g-',
+		lw=2,
+		label='$\omega_{pe}t=500$',
+		)
+	plt.xlim(-2,8)
+	plt.ylim(-8,1.2)
+	plt.xlabel('$\gamma-1$')
 	plt.ylabel('Part Number')
 	plt.legend(loc='best', numpoints=1, fancybox=True)
-	plt.title('Jet electron spectrum',fontstyle='normal')
-	plt.savefig(file+folder+'/PartSpecBm'+str(ii)+'.png',bbox_inches='tight')  # n means normalized
+	plt.title('Particle spectrum',fontstyle='normal')
+	plt.savefig(file+folder+'/PartSpecBm'+str(ii)+'.pdf',bbox_inches='tight')  # n means normalized
 	plt.close()
+	# plt.show()
 
